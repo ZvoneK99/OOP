@@ -1,0 +1,11 @@
+package doWhile_03;
+
+import java.util.Scanner;
+public class doWhile_03 {
+
+	public static void main(String[]args) {
+		int randomBroj = (int)(Math.random()*(10-1))+1;
+		Scanner ulaz = new Scanner(System.in);
+		//System.out.println(randomBroj);
+	}
+}

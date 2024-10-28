@@ -1,0 +1,17 @@
+package doWhile_01;
+
+import java.util.Scanner;
+
+public class doWhole_01 {
+	public static void main(String[]args) {
+		Scanner ulaz = new Scanner(System.in);
+		int broj;
+		do {
+			System.out.println("Unesite broj:");
+			broj = ulaz.nextInt();
+			System.out.println("Uneseni broj je: "+broj);
+		}while(broj>0);
+		ulaz.close();
+	}
+
+}

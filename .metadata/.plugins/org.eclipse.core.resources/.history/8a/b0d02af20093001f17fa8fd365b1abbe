@@ -1,0 +1,6 @@
+package primjer_03;
+
+public class Svjetiljka {
+	int baterija;
+	boolean ukljucena;
+}

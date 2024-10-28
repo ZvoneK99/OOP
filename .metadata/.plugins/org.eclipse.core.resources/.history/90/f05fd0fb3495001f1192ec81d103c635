@@ -1,0 +1,25 @@
+package doWhile_03;
+
+import java.util.Scanner;
+public class doWhile_03 {
+
+	public static void main(String[]args) {
+		int tajniBroj = (int)(Math.random()*(10-1))+1;
+		Scanner ulaz = new Scanner(System.in);
+		System.out.println(tajniBroj);
+		int korisnikBroj;
+		System.out.print("Unesite broj: ");
+		 korisnikBroj = ulaz.nextInt();
+		do {
+			
+			if(korisnikBroj>tajniBroj) {
+				System.out.println("Vaš broj je prevelik. Pokušajte ponovno.");
+			}else if(korisnikBroj<tajniBroj) {
+				System.out.println("Vaš broj je premali. Pokušajte ponovno.");
+			}else {
+				System.out.println("Čestitamo pogodili ste broj.");
+			}
+
+		}while(korisnikBroj==tajniBroj);
+	}
+}

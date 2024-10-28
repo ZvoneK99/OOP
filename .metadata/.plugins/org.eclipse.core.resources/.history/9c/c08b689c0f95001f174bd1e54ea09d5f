@@ -1,0 +1,58 @@
+package primjer_09;
+
+import java.util.ArrayList;
+
+public class PametnaZarada {
+	double stanjeNaRacunu;
+	private ArrayList<Double> prihodi;
+	private ArrayList<Double> troskovi;
+	
+	public PametnaZarada(double stanjeNaRacunu) {
+		this.stanjeNaRacunu = stanjeNaRacunu;
+		this.prihodi = new ArrayList<>();
+		this.troskovi = new ArrayList<>();
+	}
+	public void dodajPrihod(double iznos) {
+		if(iznos<=0) {
+			System.out.println("Iznos mora biti pozitivan.");
+			return;
+		}
+		else {
+			this.stanjeNaRacunu+=iznos;
+			System.out.println("Prihodi na racunu su sada: "+stanjeNaRacunu);
+		}
+	}
+	public void dodajTrosak(double iznos) {
+		if(iznos>0 && iznos<stanjeNaRacunu) {
+			this.stanjeNaRacunu-=iznos;
+			System.out.println("Trenutno stanje na racunu je: "+this.stanjeNaRacunu+".");
+		}
+		else {
+			System.out.println("Ne možete skiniti taj iznos sa računa.");
+		}
+	}
+	public double izracunajUkupnePrihode() {
+		double ukupno = 0;
+		for(double prihod : prihodi) {
+			ukupno += prihod;
+		}
+		return ukupno;
+	}
+	public double izracunajUkupneTroskove() {
+		double ukupno = 0;
+		for(double trosak : troskovi) {
+			ukupno += trosak;
+		}
+		return ukupno;
+	}
+	public void ispisiDetalje() {
+		System.out.println("Stanje na računu je: "+this.stanjeNaRacunu);
+		System.out.println("Ukupni prihodi su: "+prihodi);
+		System.out.println("Ukupni toskovi su: "+troskovi);
+	}
+	public static void main(String[] args) {
+		PametnaZarada jao = new PametnaZarada(150);
+		
+		jao.ispisiDetalje();
+	}
+}

@@ -1,0 +1,17 @@
+package primjer_02;
+
+public class MobilniTelefon {
+	String marka;
+	String model;
+	int stanjeBaterije;
+	boolean ukljucen;
+	
+	public void ukljuci() {
+		if(this.ukljucen) {
+		
+		}
+		else {
+			
+		}
+	}
+}

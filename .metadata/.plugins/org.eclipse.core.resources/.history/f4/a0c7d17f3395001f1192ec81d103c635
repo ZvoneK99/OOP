@@ -1,0 +1,11 @@
+package doWhile_03;
+
+import java.util.Scanner;
+public class doWhile_03 {
+
+	public static void main(String[]args) {
+		int broj = Math.random()*11
+		Scanner ulaz = new Scanner(System.in);
+		
+	}
+}

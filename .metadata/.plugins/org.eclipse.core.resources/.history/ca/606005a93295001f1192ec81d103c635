@@ -1,0 +1,25 @@
+//Korisnik unosi ocjene (brojevi od 1 do 5). 
+//Unos se nastavlja sve dok se ne unese 0. Program zatim ispisuje prosjek svih unesenih ocjena (ne računajući 0).
+
+package doWhile_02;
+import java.util.Scanner;
+public class doWhile_02 {
+	public static void main(String[]args) {
+		Scanner ulaz = new Scanner(System.in);
+		double prosjekOcjena=1;
+		int brojacOcjena=0;
+		int ocjena;
+		int zbrojOcjena=0;
+		do {
+		System.out.println("Unesite ocjenu.");
+		ocjena = ulaz.nextInt();
+		brojacOcjena++;
+		zbrojOcjena+=ocjena;
+		if(ocjena>=1 && ocjena<=5) {
+			prosjekOcjena=zbrojOcjena/brojacOcjena;
+		}
+		}while(ocjena!=0);
+		System.out.println("Prosjek ocjena je: "+prosjekOcjena);
+	}
+
+}

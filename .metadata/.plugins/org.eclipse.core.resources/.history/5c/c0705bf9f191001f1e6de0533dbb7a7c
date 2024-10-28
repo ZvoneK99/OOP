@@ -1,0 +1,18 @@
+// primjer unosi ime i prezime (dvije rije�i) i razdvaja ih u zasebne stringove
+
+
+package vjezba3;
+
+import java.util.Scanner;
+
+public class vjezba3 {
+	
+	public static void main(String[] args) {
+		
+		Scanner ulaz = new Scanner(System.in);
+		System.out.println("Unesi ime i prezime");
+		String ime_prezime = ulaz.nextLine();
+		
+		
+	}
+}

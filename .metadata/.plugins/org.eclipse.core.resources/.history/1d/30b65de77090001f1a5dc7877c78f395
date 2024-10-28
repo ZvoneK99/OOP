@@ -1,0 +1,31 @@
+public class Automobil {
+    String marka;
+    String model;
+    int godinaProizvodnje;
+    int trenutnaBrzina;
+
+    public Automobil(String marka, String model, int godinaProizvodnje) {
+        this.marka = marka;
+        this.model = model;
+        this.godinaProizvodnje = godinaProizvodnje;
+        this.trenutnaBrzina = 0;
+    }
+
+    public void ubrzaj(int povecanje) {
+        trenutnaBrzina += povecanje;
+    }
+
+    public void uspori(int smanjenje) {
+        trenutnaBrzina -= smanjenje;
+        if (trenutnaBrzina < 0) {
+            trenutnaBrzina = 0;
+        }
+    }
+
+    public void prikaziInformacije() {
+        System.out.println("Marka je: " + marka);
+        System.out.println("Model je: " + model);
+        System.out.println("Godina proizvodnje je: " + godinaProizvodnje);
+        System.out.println("Trenutna brzina je: " + trenutnaBrzina + " km/h");
+    }
+}

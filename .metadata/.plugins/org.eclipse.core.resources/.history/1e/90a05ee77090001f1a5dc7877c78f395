@@ -1,0 +1,14 @@
+public class Projekt04 {
+    public static void main(String[] args) {
+        Automobil auto = new Automobil("Mercedes-Benz", "C-klasa", 2023);
+
+        auto.ubrzaj(50);
+        auto.prikaziInformacije();
+
+        auto.uspori(10);
+        auto.prikaziInformacije();
+
+        auto.ubrzaj(30);
+        auto.prikaziInformacije();
+    }
+}

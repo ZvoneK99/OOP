@@ -1,0 +1,26 @@
+package vjezba3;
+
+import java.util.HashMap;
+
+public class Novcanik {
+	HashMap<String, Double> valute = new HashMap<>();
+	
+	public Novcanik() {
+		
+	}
+	
+	public void dodajNovac(String valuta, double iznos) {
+	    if (iznos > 0) {
+	        if (valute.containsKey(valuta)) {
+	            // Ako valuta već postoji, dodaj na postojeći iznos
+	            valute.put(valuta, valute.get(valuta) + iznos);
+	        } else {
+	            // Ako valuta ne postoji, dodaj novi unos za tu valutu
+	            valute.put(valuta, iznos);
+	        }
+	        System.out.println("Dodano " + iznos + " " + valuta);
+	    } else {
+	        System.out.println("Iznos mora biti pozitivan.");
+	    }
+	}
+}

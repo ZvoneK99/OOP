@@ -1,0 +1,10 @@
+package vjezba3;
+
+import java.util.HashMap;
+public class Novcanik {
+	HashMap<String, Double> valute = new HashMap<>();
+	
+	public Novcanik() {
+		
+	}
+}

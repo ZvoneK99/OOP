@@ -1,0 +1,8 @@
+package Projekt04;
+
+public class Projekt04 {
+
+	public static void main(String[] args) {
+		System.out.println("Zdravo tuta");
+	}
+}

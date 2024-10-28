@@ -1,0 +1,30 @@
+package primjer_10;
+
+public class Parkiraliste {
+	int kapacitet;
+	private Automobil[] automobili;
+	int brojParkiranih;
+	
+	public Parkiraliste(int kapacitet) {
+		this.automobili = new Automobil[kapacitet];
+	}
+	public void dodajAutomobil(Automobil auto) {
+		for(int i=0; i<automobili.length; i++) {
+			if(automobili[i] == null) {
+				automobili[i] = auto;
+				System.out.println("Automobil je dodan na parkiralište.");
+				return;
+			}
+		}
+		System.out.println("Nema slobodnog mjesta na parkiralištu.");
+	}
+	public void ukloniAutomobil(String registracija) {
+		for(int i=0; i<automobili.length; i++) {
+			if(automobili[i]!=null && automobili[i].getRegistracija().equals(registracija)) {
+				automobili[i] = null;
+				System.out.println("Automobil s registracijom: "+registracija+" je uklonjen.");
+			}
+		}
+		System.out.println("Automobil s registracijom: "+registracija+" nije pronađen.");
+	}
+	}

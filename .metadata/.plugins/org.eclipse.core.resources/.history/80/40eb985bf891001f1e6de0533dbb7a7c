@@ -1,0 +1,10 @@
+// primjer unosi ime i prezime (dvije rije�i) i razdvaja ih u zasebne stringove
+
+
+package vjezba3;
+
+import java.util.Scanner;
+
+public class vjezba3 {
+
+}

@@ -1,0 +1,33 @@
+package primjer_01;
+
+public class Racunalo {
+	String proizvodjac;
+	String model;
+	String tipProcesora;
+	double brzinaProcesora;
+	int RAM;
+	boolean ukljucen;
+	
+	public Racunalo(String proizvodjac, String model, String tipProcesora, double brzinaProcesora, int RAM) {
+		this.proizvodjac = proizvodjac;
+		this.model = model;
+		this.tipProcesora = tipProcesora;
+		this.brzinaProcesora = brzinaProcesora;
+		this.RAM = RAM;
+	}
+	public void ukljuci() {
+		this.ukljucen = true;
+		System.out.println("Računalo je uključeno.");
+	}
+	public void iskljuci() {
+		this.ukljucen = false;
+		System.out.println("Računalo je isključeno.");
+	}
+	public void ispisiDetalje() {
+		System.out.println("Proizvođač računala je: "+proizvodjac+" model je: "+model+", tip procesora je: "+tipProcesora+ 
+				", brzina procesora je: "+brzinaProcesora+" GHz, veličina RAM-a je: "+RAM+" GB, i računalo je: "+ukljucen+".");
+	}
+	public static void main(String[] args) {
+		Racunalo rac1 = new Racunalo("Apple", "MACBook pro", "INTEL CORE i7", 4,0, 32);
+	}
+}

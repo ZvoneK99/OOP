@@ -1,0 +1,49 @@
+package primjer_06;
+
+public class Racunalo {
+	String marka;
+	int baterija;
+	boolean ukljuceno;
+	
+	public Racunalo(String marka, int baterija) {
+		this.marka = marka;
+		this.baterija = baterija;
+		this.ukljuceno = false;
+	}
+	public void ukljuci() {
+		if(this.baterija>0) {
+			this.ukljuceno = true;
+		}
+	}
+	public void iskljuci() {
+		this.ukljuceno = false;
+	}
+	public void napuniBateriju(int postotak) {
+		if(this.baterija==100) {
+			;
+		}
+		else {
+			if(this.baterija<100) {
+				this.baterija+=postotak;
+			}
+			if(this.baterija>100) {
+				this.baterija=100;
+			}
+		}
+	}
+	public void provjeriStanjeBaterije() {
+		System.out.println("Trenutno stanje baterije je: "+this.baterija);
+	}
+	public void ispisiDetalje() {
+		String stanje = ukljuceno ? "ukljuceno" : "iskljuceno";
+		
+		System.out.println("Računalo je trenutno: "+stanje);
+		System.out.println("Postotak baterije iznosi: "+this.baterija);
+	}
+	public static void main(String [] args) {
+		Racunalo moje = new Racunalo("Fujitsu", 30);
+		moje.ukljuci();
+		moje.napuniBateriju(40);
+		moje.ispisiDetalje();
+	}
+}
