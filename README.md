@@ -9,6 +9,6 @@ This repository contains various beginner exercises and projects in Java as I ex
 
 - **Petlje**: Practicing loops in Java.
 - **Automobil**: Basic class structure, constructors, and methods.
-  
+- **Kino & Film project.
 
 Stay tuned for more updates as I progress!
