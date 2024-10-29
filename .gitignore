@@ -1,0 +1,7 @@
+/.metadata/
+.metadata/
+*.snap
+*.log
+*.index
+.project
+.classpath

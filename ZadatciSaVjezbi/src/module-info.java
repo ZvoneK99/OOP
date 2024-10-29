@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Projekt04 {
+module ZadatciSaVjezbi {
 }
