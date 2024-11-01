@@ -1,8 +1,0 @@
-//primjer unosi ime korisnika i ispisuje pozdravnu pooruku
-
-package vjezba3;
-
-import java.util.Scanner;
-
-public class vjezba3 {
-}
