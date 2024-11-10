@@ -1,51 +1,69 @@
 package primjer02;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Student {
-	String ime;
-	String prezime;
-	String brojIndeksa;
-	int godinaStudija;
-	ArrayList<Kolegij> kolegiji;
-	
-	public Student(String ime, String prezime, String brojIndeksa, int godinaStudija) {
-		this.ime = ime;
-		this.prezime = prezime;
-		this.brojIndeksa = brojIndeksa;
-		this.godinaStudija = godinaStudija;
-		this.kolegiji = new ArrayList<>();
-	}
-	public void dodajKolegij(Kolegij kolegij) {
-		kolegiji.add(kolegij);
-		System.out.println("Kolegij "+kolegij+" je dodan.");
-		System.out.println("-----------------------------");
-	}
-	public void ispisiSveKolegije() {
-		System.out.println("Kolegiji koje student pohađa su: ");
-		for(Kolegij k : kolegiji) {
-			k.ispisiImeKolegija();
-		}
-	}
+    String ime;
+    String prezime;
+    String brojIndeksa;
+    int godinaStudija;
+    ArrayList<Kolegij> kolegiji;
+    ArrayList<Ispit> ispiti;
 
-	public void ispisiDetalje() {
-		System.out.println("Podatci o studentu:");
-		System.out.println("Ime: "+ime);
-		System.out.println("Prezime: "+prezime);
-		System.out.println("Broj indeksa: "+brojIndeksa);
-		System.out.println("GodinaStudija: "+godinaStudija);
-		System.out.println("-----------------------------");
-	}
-	
-	public static void main(String[]args) {
-		Student s1 = new Student("Zvone", "Kozul", "1743/rr", 3);
-		Kolegij k1 = new Kolegij("Matematika", 7);
-		Kolegij k2 = new Kolegij("OOP", 5);
-		Kolegij k3 = new Kolegij("Fizika", 3);
-		s1.ispisiDetalje();
-		s1.dodajKolegij(k1);
-		s1.dodajKolegij(k2);
-		s1.dodajKolegij(k3);
-		s1.ispisiSveKolegije();
-	}
+    // Konstruktor
+    public Student(String ime, String prezime, String brojIndeksa, int godinaStudija) {
+        this.ime = ime;
+        this.prezime = prezime;
+        this.brojIndeksa = brojIndeksa;
+        this.godinaStudija = godinaStudija;
+        this.kolegiji = new ArrayList<>();
+        this.ispiti = new ArrayList<>();
+    }
+
+    // Dodavanje ispita u ArrayList
+    public void dodajIspit(Ispit ispit) {
+        ispiti.add(ispit);
+        System.out.println("Ispit " + ispit.nazivKolegija + " je uspješno dodan.");
+        System.out.println("-----------------------------");
+    }
+
+    // Ispis detalja ispita
+    public void ispisiSveIspite() {
+        System.out.println("Ispiti koje je student polagao:");
+        for (Ispit ispit : ispiti) {
+            ispit.ispisiDetaljeIspita();
+        }
+    }
+
+    public static void main(String[] args) {
+        Student s1 = new Student("Zvone", "Kozul", "1743/rr", 3);
+        Scanner ulaz = new Scanner(System.in);
+
+        // Dodavanje ispita
+        System.out.println("Koliko ispita želite unijeti?");
+        int brojIspita = ulaz.nextInt();
+        ulaz.nextLine(); // Očisti buffer
+
+        for (int i = 0; i < brojIspita; i++) {
+            System.out.println("Unesite naziv kolegija za ispit:");
+            String nazivKolegija = ulaz.nextLine();
+
+            System.out.println("Unesite datum ispita (npr. 21.prosinca.2024):");
+            String datum = ulaz.nextLine();
+
+            System.out.println("Unesite rezultat ispita (ocjena):");
+            int rezultat = ulaz.nextInt();
+            ulaz.nextLine(); // Očisti buffer
+
+            // Kreiraj ispit i dodaj ga studentu
+            Ispit ispit = new Ispit(nazivKolegija, datum, rezultat);
+            s1.dodajIspit(ispit);
+        }
+
+        // Ispis svih ispita
+        s1.ispisiSveIspite();
+
+        ulaz.close();
+    }
 }
