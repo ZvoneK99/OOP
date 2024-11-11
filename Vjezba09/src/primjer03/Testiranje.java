@@ -22,6 +22,8 @@ public class Testiranje {
 
         osoba1.dodajPredmet(fiz);
         osoba1.dodajPredmet(mtm);
+        osoba2.dodajPredmet(oop);
+        osoba2.dodajPredmet(oeie);
         // Provjera ispravnosti datuma za osoba1
         if (!datumRodjenja.ispravnostDatume()) {
             System.out.println("Unos datuma rođenja za osobu1 je pogrešan.");
