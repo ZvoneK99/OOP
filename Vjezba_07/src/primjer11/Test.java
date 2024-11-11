@@ -27,7 +27,7 @@ public class Test {
             ulaz.nextLine(); // Očisti ulazni buffer
 
             DatumRodjenja datum = new DatumRodjenja(dan, mjesec, godina);
-            osobe.add(new Osoba(ime, prezime, datumRođenja));
+            osobe.add(new Osoba(ime, prezime, datum));
         }
 
         // Sortiranje osoba po datumu rođenja od najstarijeg do najmlađeg

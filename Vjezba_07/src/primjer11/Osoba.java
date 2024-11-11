@@ -3,9 +3,9 @@ package primjer11;
 public class Osoba {
 	String ime;
 	String prezime;
-	int datumRođenja;
+	DatumRodjenja datumRođenja;
 	
-	public Osoba(String ime, String prezime, int datumRođenja) {
+	public Osoba(String ime, String prezime, DatumRodjenja datumRođenja) {
 		this.ime = ime;
 		this.prezime = prezime;
 		this.datumRođenja = datumRođenja;
