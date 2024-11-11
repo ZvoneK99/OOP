@@ -23,16 +23,4 @@ public class Zaposlenik {
 		System.out.println("Broj zaposlenika: "+brojZaposlenika);
 		System.out.println("Projekti na kojima radi: "+projekti);
 	}
-	public int getBrojZaposlenika() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	public String getIme() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	public String getPrezime() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }

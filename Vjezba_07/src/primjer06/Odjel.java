@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class Odjel {
 	ArrayList<Zaposlenik> zaposlenici;
 	
-	public Odjel(ArrayList<Zaposlenik> zaposlenici)  {
-		this.zaposlenici = zaposlenici;
+	public Odjel()  {
+		this.zaposlenici = new ArrayList<>();
 	}
 	public void dodajZaposlenika(Zaposlenik zaposlenik) {
 		zaposlenici.add(zaposlenik);
@@ -18,7 +18,7 @@ public class Odjel {
 	}
 	public void prikaziZaposlenikeNaProjektu(String projekt) {
 		for(Zaposlenik z : zaposlenici) {
-			if(z.projekti.equals(projekt)) {
+			if(z.projekti.contains(projekt)) {
 				System.out.println(z.ime+" "+z.prezime+" "+z.brojZaposlenika);
 			}
 		}

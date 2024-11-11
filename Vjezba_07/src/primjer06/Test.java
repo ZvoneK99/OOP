@@ -14,6 +14,9 @@ public class Test {
 		Odjel odjel = new Odjel();
 		odjel.dodajZaposlenika(z1);
 		odjel.dodajZaposlenika(z2);
+		
+		  odjel.prikaziSveZaposlenike();
+	        odjel.prikaziZaposlenikeNaProjektu("zid");
 	}
 
 
