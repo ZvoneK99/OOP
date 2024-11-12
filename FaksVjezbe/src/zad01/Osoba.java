@@ -1,3 +1,16 @@
+// klasa osoba, a ima ime, prezime, datum rodjenja
+// datum rodjenja je posebna klasa koja ima polja: dan, mjesec i godinu
+// u glavnom programu napraviti niz od 10 osoba, zatraziti od korisnika unos imena, prezimena i datuma rodjenja za sve osobe
+// ispisati ime, prezime i datum rodjenja, sortirane od najstarijeg do najmladjeg
+// ispisati je li osoba punoljetna
+// ograniciti da korisnik ne unosi gluposti (osoba rodjena u buducnosti i slicno)
+// napraviti klasu studij koja ima polje naziv
+// napraviti klasu predmet koja ima polje naziv predmeta, studij, godina studij
+// prosiriti klasu osoba tako da cemo dodati polje studij i niz predmeti 
+// kreirati niz od 10 osoba samo sto jos unosimo naziv studija i dodajemo predmete tog studija
+// napraviti niz od 3 studija (elektro, rac i stroja), svakom studiju dodijeliti po 5 predmeta (inicijalizirati niz)
+// unosi studij - ispisati studente po studijima, sortirane po datumu rodjenja
+
 package zad01;
 
 import java.util.ArrayList;

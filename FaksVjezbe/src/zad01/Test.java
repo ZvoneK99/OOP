@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        ArrayList<Osoba> osobe = new ArrayList<>(); // Inicijalizacija liste osoba
-        ArrayList<Studij> studiji = new ArrayList<>(); // Inicijalizacija liste studija
+        ArrayList<Osoba> osobe = new ArrayList<>(); //Lista osoba
+        ArrayList<Studij> studiji = new ArrayList<>(); //Lista studij
         
         // Kreiranje studija
         Studij racunarstvo = new Studij("Racunarstvo");
@@ -19,7 +19,7 @@ public class Test {
         studiji.add(strojarstvo);
         studiji.add(elektrotehnika);
 
-        // Dodavanje predmeta za svaki studij
+        // Dodavanje predmeta za studije
         racunarstvo.dodajPredmet(new Predmet("Programiranje", racunarstvo, 1));
         racunarstvo.dodajPredmet(new Predmet("Matematika", racunarstvo, 1));
         racunarstvo.dodajPredmet(new Predmet("Baze podataka", racunarstvo, 2));
@@ -79,7 +79,7 @@ public class Test {
                 continue;
             }
 
-            ulaz.nextLine(); // Čišćenje ulaznog toka
+            ulaz.nextLine(); // Čišćenje
 
             System.out.println("Unesite naziv studija:");
             String nazivStudij = ulaz.nextLine();
@@ -93,7 +93,7 @@ public class Test {
             
             if (odabraniStudij == null) {
                 System.out.println("Studij nije pronađen. Molimo odaberite ispravan studij.");
-                i--; // Ponovni unos za istu osobu
+                i--; 
                 continue;
             }
             
