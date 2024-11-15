@@ -22,9 +22,6 @@ public class Datum implements Comparable<Datum> {
 			return Integer.compare(this.dan, drugiDatum.dan);
 		}
 	}
-	public String ispisiDatum() {
-		return toString();
-	}
 	@Override
 	public String toString() {
 		return dan+"."+mjesec+"."+godina+".";

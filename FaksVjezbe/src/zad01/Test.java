@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        ArrayList<Osoba> osobe = new ArrayList<>(); //Lista osoba
+        ArrayList<Osoba> osobe = new ArrayList<>(); //Kreiranje liste osoba
         ArrayList<Studij> studiji = new ArrayList<>(); //Lista studij
         
         // Kreiranje studija
@@ -98,7 +98,7 @@ public class Test {
             }
             
             Datum datum = new Datum(dan, mjesec, godina); // Kreiranje objekta datum
-            Osoba osoba = new Osoba(ime, prezime, datum, odabraniStudij);
+            Osoba osoba = new Osoba(ime, prezime, datum, odabraniStudij);// Kreiranje objekta osoba
             osobe.add(osoba);
         }
 
@@ -110,7 +110,7 @@ public class Test {
             o.jeLiPunoljetna();
         }
         
-        // Unos studija za ispis studenata
+        // Unos studija za ispis 
         System.out.println("Unesite naziv studija za prikaz studenata:");
         String uneseniStudij = ulaz.nextLine();
         
