@@ -5,55 +5,76 @@ import java.util.Scanner;
 import java.util.Comparator;
 
 public class Osoba {
-	String ime;
-	String prezime;
-	Datum datumRođenja;
-	
-	public Osoba(String ime, String prezime, Datum datumRođenja) {
-		this.ime = ime;
-		this.prezime = prezime;
-		this.datumRođenja = datumRođenja;
-	}
-	public void podatciOOsobi() {
-		System.out.println("Ime osobe: "+ime);
-		System.out.println("Prezime osobe: "+prezime);
-		System.out.println("Datum rođenja osobe: "+datumRođenja.ispisiDatum());
-	}
-	public static void main(String[]args) {
-		//Ispis podatak iz 2.zadatka
-		Datum datum = new Datum(2, 9, 1999);
-		Osoba o1 = new Osoba("Zvone", "Kozul", datum);
-		o1.podatciOOsobi();
-		
-		//3.Zadatak
-		ArrayList<Osoba> osobe = new ArrayList<>();
-		Scanner ulaz = new Scanner(System.in);
-		System.out.println("Unesite koliko osoba zelite uniti:");
-		for(int i=0; i<3; i++) {
-			System.out.println("Unesite ime za osobu "+(i+1));
-			String ime = ulaz.nextLine();
-			
-			System.out.println("Unesite prezime za osobu "+(i+1));
-			String prezime = ulaz.nextLine();
-			
-			System.out.println("Unesite dan rođenja: ");
-			int dan = ulaz.nextInt();
-			
-			System.out.println("Unesite mjesec rođenja: ");
-			int mjesec = ulaz.nextInt();
-			
-			System.out.println("Unesite godinu rođenja");
-			int godina = ulaz.nextInt();
-			ulaz.nextLine();
-			Datum noviDatum = new Datum(dan, mjesec, godina);
-			osobe.add(new Osoba(ime, prezime, noviDatum));
+    private String ime;
+    private String prezime;
+    private Datum datumRođenja;
 
-		}
-		osobe.sort(Comparator.comparing(o -> o.datumRođenja));
+    // Konstruktor
+    public Osoba(String ime, String prezime, Datum datumRođenja) {
+        this.ime = ime;
+        this.prezime = prezime;
+        this.datumRođenja = datumRođenja;
+    }
 
-		for(Osoba o : osobe) {
-			o.podatciOOsobi();
-		}
-		
-	}
+    // Getter za datum rođenja (korisno za sortiranje)
+    public Datum getDatumRođenja() {
+        return datumRođenja;
+    }
+
+    // Metoda za ispis informacija
+    @Override
+    public String toString() {
+        return "Ime: " + ime + ", Prezime: " + prezime + ", Datum rođenja: " + datumRođenja;
+    }
+
+    // Glavni program
+    public static void main(String[] args) {
+        ArrayList<Osoba> osobe = new ArrayList<>();
+        Scanner ulaz = new Scanner(System.in);
+
+        System.out.println("Unesite koliko osoba želite unijeti:");
+        int brojOsoba = ulaz.nextInt();
+        ulaz.nextLine(); // Čišćenje ulaznog buffera
+
+        // Unos podataka za osobe
+        for (int i = 0; i < brojOsoba; i++) {
+            System.out.println("Unesite ime za osobu " + (i + 1) + ":");
+            String ime = ulaz.nextLine();
+
+            System.out.println("Unesite prezime za osobu " + (i + 1) + ":");
+            String prezime = ulaz.nextLine();
+
+            System.out.println("Unesite dan rođenja: ");
+            int dan = validirajUnosBroja(ulaz);
+
+            System.out.println("Unesite mjesec rođenja: ");
+            int mjesec = validirajUnosBroja(ulaz);
+
+            System.out.println("Unesite godinu rođenja: ");
+            int godina = validirajUnosBroja(ulaz);
+
+            Datum datum = new Datum(dan, mjesec, godina);
+            osobe.add(new Osoba(ime, prezime, datum));
+        }
+
+        // Sortiranje po datumu rođenja
+        osobe.sort(Comparator.comparing(Osoba::getDatumRođenja));
+
+        // Ispis svih osoba
+        System.out.println("\nOsobe sortirane po datumu rođenja:");
+        for (Osoba o : osobe) {
+            System.out.println(o);
+        }
+
+        ulaz.close();
+    }
+
+    // Metoda za validaciju unosa broja
+    private static int validirajUnosBroja(Scanner ulaz) {
+        while (!ulaz.hasNextInt()) {
+            System.out.println("Molimo unesite ispravan broj:");
+            ulaz.next(); // Preskoči nevažeći unos
+        }
+        return ulaz.nextInt();
+    }
 }
