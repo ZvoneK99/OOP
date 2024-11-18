@@ -2,6 +2,9 @@ package zadatak08;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Testiranje {
@@ -31,5 +34,30 @@ public class Testiranje {
 				v.ispisiNazivVozila();
 			}
 		}
+		
+		//Kreiranje HashMap za grupiranje
+		
+		HashMap<String, List<Vozilo>> grupiranaVozila = new HashMap<>();
+		grupiranaVozila.put("Automobil", new ArrayList<>());
+		grupiranaVozila.put("Kamion", new ArrayList<>());
+		
+		//Grupiranje vozila po tipu
+		for(Vozilo v : vozila) {
+			if(v instanceof Automobil) {
+				grupiranaVozila.get("Automobil").add(v);
+			}
+			else if(v instanceof Kamion ) {
+				grupiranaVozila.get("Kamion").add(v);
+			}
+		}
+		
+		//Ispis grupiranih vozila
+		for(Map.Entry<String, List<Vozilo>> entry : grupiranaVozila.entrySet()) {
+			System.out.println("Tip vozila: "+entry.getKey());
+			for(Vozilo v : entry.getValue()) {
+				v.ispisiDetalje();
+			}
+		}
+		
 	}
 }
