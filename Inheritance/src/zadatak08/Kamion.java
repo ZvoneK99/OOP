@@ -10,6 +10,8 @@ public class Kamion extends Vozilo {
 	@Override
 	public void ispisiDetalje() {
 		System.out.println("Marka: "+marka+", Godina proizvodnje: "+godinaProizvodnje+", Nosivost: "+nosivost+" tona.");
+		System.out.println("Starost Kamiona je: "+izracunajStarost()+" godina.");
+		System.out.println("-------------------------------------------------------------------------------------------");
 	}
 
 }

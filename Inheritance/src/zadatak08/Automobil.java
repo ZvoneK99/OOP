@@ -11,7 +11,8 @@ public class Automobil extends Vozilo {
 	@Override
 	public void ispisiDetalje() {
 		System.out.println("Marka: "+marka+", Godina proizvodnje: "+godinaProizvodnje+", Broj vrata: "+brojVrata+".");
-
+		System.out.println("Starost Automobila je: "+izracunajStarost()+" godina.");
+		System.out.println("-------------------------------------------------------------------------------------------");
 	}
 
 }

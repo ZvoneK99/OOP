@@ -1,5 +1,7 @@
 package zadatak08;
 
+import java.util.Calendar;
+
 public abstract class Vozilo {
 	String marka;
 	int godinaProizvodnje;
@@ -15,4 +17,9 @@ public abstract class Vozilo {
 		return this.godinaProizvodnje;
 	}
 	public abstract void ispisiDetalje();
+	public int izracunajStarost() {
+		int trenutnaGodina = Calendar.getInstance().get(Calendar.YEAR);
+		return trenutnaGodina-this.godinaProizvodnje;
+	}
 }
+
