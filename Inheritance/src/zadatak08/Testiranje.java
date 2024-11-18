@@ -2,6 +2,7 @@ package zadatak08;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class Testiranje {
 	public static void main(String[]args) {
@@ -19,6 +20,16 @@ public class Testiranje {
 		System.out.println("Vozila sortirana od najstarijeg do najmlađeg ");
 		for(Vozilo v : vozila) {
 			v.ispisiDetalje();
+		}
+		
+		Scanner ulaz = new Scanner(System.in);
+		System.out.println("Unesite minimalnu starost vozila: ");
+		int minimalnaStarost = ulaz.nextInt();
+		System.out.println("Vozila koja su starija od te granice su: ");
+		for(Vozilo v : vozila) {
+			if(v.izracunajStarost()>=minimalnaStarost) {
+				v.ispisiNazivVozila();
+			}
 		}
 	}
 }

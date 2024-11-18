@@ -13,5 +13,8 @@ public class Kamion extends Vozilo {
 		System.out.println("Starost Kamiona je: "+izracunajStarost()+" godina.");
 		System.out.println("-------------------------------------------------------------------------------------------");
 	}
-
+	@Override
+	public void ispisiNazivVozila() {
+		System.out.println(marka);
+	}
 }

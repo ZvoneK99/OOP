@@ -17,6 +17,7 @@ public abstract class Vozilo {
 		return this.godinaProizvodnje;
 	}
 	public abstract void ispisiDetalje();
+	public abstract void ispisiNazivVozila();
 	public int izracunajStarost() {
 		int trenutnaGodina = Calendar.getInstance().get(Calendar.YEAR);
 		return trenutnaGodina-this.godinaProizvodnje;
