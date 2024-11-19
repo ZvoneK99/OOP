@@ -2,7 +2,7 @@ package zadatak09;
 
 import java.util.Calendar;
 
-public class Zaposlenik extends Osoba {
+public class Zaposlenik extends Osoba implements Comparable<Zaposlenik> {
 	String pozicija;
 	double plaća;
 	int godinaZaposlenja;
@@ -11,6 +11,9 @@ public class Zaposlenik extends Osoba {
 		this.pozicija = pozicija;
 		this.plaća = plaća;
 		this.godinaZaposlenja = godinaZaposlenja;
+	}
+	public int getGodinaZaposlenja() {
+		return this.godinaZaposlenja;
 	}
 	public boolean jeLiVisokPlaceni(double prag) {
 		return plaća>prag;
@@ -27,4 +30,10 @@ public class Zaposlenik extends Osoba {
 	public void ispisiImePrezime() {
 		System.out.println(ime+" "+prezime);
 	}
+	@Override
+	public int compareTo(Zaposlenik o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
 }
