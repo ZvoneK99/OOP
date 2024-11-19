@@ -7,7 +7,7 @@ public class BrojanjeRijeci {
 		HashMap<Character, Integer> frekvencija = new HashMap<>();
 		String tekst = "banana";
 		
-		for(char c : tekst.toCharArray()) {
+		for(char c : tekst.toLowerCase().toCharArray()) {
 			frekvencija.put(c, frekvencija.getOrDefault(c, 0)+ 1);
 		}
 		System.out.println(frekvencija);
