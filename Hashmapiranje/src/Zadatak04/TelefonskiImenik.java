@@ -39,7 +39,6 @@ public class TelefonskiImenik {
 				else {
 					System.out.println("Kontakt ne postoji.");
 				}
-				break;
 			}
 			else if(izbor==2) {
 				System.out.println("Dodajte ime.");
@@ -51,7 +50,6 @@ public class TelefonskiImenik {
 				telefonskiImenik.put(novoIme, noviBroj);
 				
 				System.out.println("Kontakt je uspješno dodan.");
-				break;
 			}
 			else if(izbor==3) {
 				System.out.println("Unesite ime kontakta za brisanje.");
@@ -65,14 +63,12 @@ public class TelefonskiImenik {
 				else {
 					System.out.println("Kontakt ne postoji.");
 				}
-				break;
 			}
 			else if(izbor==4) {
 				System.out.println("Svi kontakti:");
 				for(Map.Entry<String, String> kontakt : telefonskiImenik.entrySet()) {
 					System.out.println("Ime: "+kontakt.getKey()+" Broj: "+kontakt.getValue());
 				}
-				break;
 			}
 			else if(izbor==5) {
 				System.out.println("Izlaz iz programa.");
@@ -83,6 +79,5 @@ public class TelefonskiImenik {
 				System.out.println("Pogrešan odabir. Pokušajte ponovno");
 			}
 		}
-		ulaz.close();
 	}
 }
