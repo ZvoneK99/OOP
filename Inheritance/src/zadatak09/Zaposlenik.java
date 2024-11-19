@@ -15,6 +15,9 @@ public class Zaposlenik extends Osoba implements Comparable<Zaposlenik> {
 	public int getGodinaZaposlenja() {
 		return this.godinaZaposlenja;
 	}
+	public String getPozicija() {
+		return this.pozicija;
+	}
 	public boolean jeLiVisokPlaceni(double prag) {
 		return plaća>prag;
 	}

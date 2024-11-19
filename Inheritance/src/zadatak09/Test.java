@@ -2,6 +2,9 @@ package zadatak09;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map.Entry;
 import java.util.Scanner;
 
 public class Test {
@@ -45,6 +48,25 @@ public class Test {
 		for(Zaposlenik z : zaposlenici) {
 			z.ispisiImePrezime();
 		}
+		HashMap<String, List<Zaposlenik>> grupiraniZaposlenici = new HashMap<>();
+
+		// Dinamičko grupiranje bez unaprijed definiranih ključeva
+		for (Zaposlenik z : zaposlenici) {
+		    String pozicija = z.getPozicija(); // Pretpostavljamo da postoji getter za poziciju
+
+		    // Ako pozicija još nije dodana u mapu, dodaj je
+		    grupiraniZaposlenici.putIfAbsent(pozicija, new ArrayList<>());
+
+		    // Dodaj zaposlenika u odgovarajuću grupu
+		    grupiraniZaposlenici.get(pozicija).add(z);
+		}
+		for (Entry<String, List<Zaposlenik>> entry : grupiraniZaposlenici.entrySet()) {
+		    System.out.println("Pozicija: " + entry.getKey());
+		    for (Zaposlenik z : entry.getValue()) {
+		        z.ispisiDetalje();
+		    }
+		}
+
 		
 		ulaz.close();
 	}
