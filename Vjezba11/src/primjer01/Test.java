@@ -1,10 +1,18 @@
 package primjer01;
 
+import java.util.ArrayList;
+
 public class Test {
 	public static void main(String[]args) {
-		Osoba osoba = new Osoba("Zvone", 25);
-		Student student = new Student("Pero", 20, "1743/RR");
-		osoba.ispisiDetalje();
-		student.ispisiDetalje();
+		ArrayList<Osoba> osobe = new ArrayList<>();
+		 osobe.add(new Student("Marko", 20, "123456"));
+	        osobe.add(new Student("Ana", 22, "654321"));
+
+	        // Dodavanje zaposlenika
+	        osobe.add(new Zaposlenik("Ivana", 30, 5000.0));
+	        osobe.add(new Zaposlenik("Petar", 35, 7000.0));
+		for(Osoba o : osobe) {
+			o.ispisiDetalje();
+		}
 	}
 }
