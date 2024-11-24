@@ -55,11 +55,12 @@ public class Racunalo implements Comparable<Racunalo> {
 			}
 		}
 		
-	public void ispisiDetalje() {
-		String stanje = ukljuceno ? "Da" : "Ne";
-		System.out.println("Proizvođač: "+proizvodjac+", Model: "+model+", Procesor: "+procesor+", RAM: "+ram+", Ukljuceno: "+stanje+".");
-		System.out.println("");
-	}
+		public String ispisiDetalje() {
+		    return "Proizvođač: " + this.proizvodjac + ", Model: " + this.model + 
+		           ", Procesor: " + this.procesor + ", RAM: " + this.ram + "GB, Uključeno: " +
+		           (this.ukljuceno ? "Da" : "Ne");
+		}
+
 
 	@Override
 	public int compareTo(Racunalo o) {
