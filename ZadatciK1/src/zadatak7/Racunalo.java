@@ -9,6 +9,9 @@ public class Racunalo implements Comparable<Racunalo> {
 	static int brojRacunala = 0;
 	
 	public Racunalo(String proizvodjac, String model, String procesor, int ram) {
+		if (ram<0) {
+			throw new IllegalArgumentException("Količina RAM-a ne može biti negativna: "+ram);
+		}
 		this.proizvodjac = proizvodjac;
 		this.model = model;
 		this.procesor = procesor;
