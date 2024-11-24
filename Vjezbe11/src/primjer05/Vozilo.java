@@ -16,6 +16,9 @@ public class Vozilo {
 		this.godinaProizvodnje = godinaProizvodnje;
 		this.cijena = cijena;
 	}
+	public void start() {
+		System.out.println("Vozilo se pokreće");
+	}
 	public double getCijena() {
 		return this.cijena;
 	}

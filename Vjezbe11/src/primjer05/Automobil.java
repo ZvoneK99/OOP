@@ -18,4 +18,8 @@ public class Automobil extends Vozilo {
 			super.ispisiDetalje();
 			System.out.println("Broj vrata: "+brojVrata+", Tip goriva: "+tipGoriva);
 		}
+		@Override
+		public void start() {
+			System.out.println("Automobil se pokreće");
+		}
 }
