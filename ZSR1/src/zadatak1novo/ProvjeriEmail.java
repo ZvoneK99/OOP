@@ -8,7 +8,8 @@ public class ProvjeriEmail {
 		System.out.println("Unesite vas postanski broj:");
 		String broj = ulaz.nextLine();
 		
-		String regex = "^[0-9]{3}[ -]?[0-9]{2}$";
+		String regex = "^[a-zA-Z][a-zA-Z0-9._]{2,}[a-zA-Z0-9]@[a-zA-Z0-9]+\\.(com|net|org)$";
+
 		
 		if(broj.matches(regex)) {
 			System.out.println("Broj je ispravan.");
