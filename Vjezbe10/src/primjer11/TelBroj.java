@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class TelBroj {
 	public static void main(String[] args) {
 		Scanner ulaz = new Scanner(System.in);
-		System.out.println("Unesite telefonski broj za provjeru.");
+		System.out.println("Unesite postanski sanducic broj za provjeru.");
 		String broj = ulaz.nextLine();
 		
-		String zadovoljavajuciBroj = "^\\+?[0-9]{1,3}[- ][0-9]{3,10}([- ][0-9]{2,4})*$";
+		String zadovoljavajuciBroj = "[0-9]{5}([-][0-9]{4})?$";
 
 		
 		if(broj.matches(zadovoljavajuciBroj)) {
