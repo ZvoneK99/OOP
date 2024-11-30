@@ -1,6 +1,7 @@
 package zadatak2;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
@@ -15,21 +16,16 @@ public class DatumRodenja {
 		
 		String prezime = imePrezime.substring(imePrezime.indexOf(' ')+1);
 		
-		System.out.println("Unesite dan rođenja.");
-		int dan = ulaz.nextInt();
+		System.out.println("Unesite datum rođenja u formatu dd.MM.yyyy.");
+		String unosDatuma = ulaz.nextLine();
 		
-		System.out.println("Unesite mjesec rođenja.");
-		int mjesec = ulaz.nextInt();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.M.yyyy");
 		
-		System.out.println("Unesite godinu rođenja.");
-		int godina = ulaz.nextInt();
+		LocalDate datumRodenja = LocalDate.parse(unosDatuma, formatter);
 		
-		
-		
-		LocalDate datumRodenja = LocalDate.of(godina, mjesec, dan);
 		LocalDate danas = LocalDate.now();
 		
-		LocalDate sljedeciRodjendan = LocalDate.of(danas.getYear(), mjesec, dan);
+		LocalDate sljedeciRodjendan = LocalDate.of(danas.getYear(), datumRodenja.getMonth(), datumRodenja.getDayOfMonth());
 		
 		if(sljedeciRodjendan.isBefore(danas) || sljedeciRodjendan.isEqual(danas)) {
 			sljedeciRodjendan = sljedeciRodjendan.plusYears(1);
@@ -37,7 +33,7 @@ public class DatumRodenja {
 		long preostaliDani = ChronoUnit.DAYS.between(danas, sljedeciRodjendan);
 		
 		System.out.println("Ime i prezime: "+ime+" "+prezime);
-		System.out.println("Datum rođenja: "+dan+"."+mjesec+"."+godina);
+		System.out.println("Datum rođenja: "+datumRodenja);
 		System.out.println("Sljedeci rođendan je za "+preostaliDani+" dana.");
 	}
 }
