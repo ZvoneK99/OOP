@@ -35,6 +35,8 @@ public class DatumRodenja {
 		System.out.println("Ime i prezime: "+ime+" "+prezime);
 		System.out.println("Datum rođenja: "+datumRodenja);
 		System.out.println("Sljedeci rođendan je za "+preostaliDani+" dana.");
+		ulaz.close();
 	}
+	
 }
 
