@@ -8,7 +8,7 @@ public class TelBroj {
 		System.out.println("Unesite postanski sanducic broj za provjeru.");
 		String broj = ulaz.nextLine();
 		
-		String zadovoljavajuciBroj = "[0-9]{5}([-][0-9]{4})?$";
+		String zadovoljavajuciBroj = "^[0-9]{5}([-][0-9]{4})?$";
 
 		
 		if(broj.matches(zadovoljavajuciBroj)) {
