@@ -1,6 +1,5 @@
 package zadatak5;
 
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,23 +8,21 @@ public class Brojevi {
         Scanner ulaz = new Scanner(System.in);
         ArrayList<Integer> cijeliDijelovi = new ArrayList<>();
 
-        // Neprekidni unos brojeva
+       
         while (true) {
             System.out.println("Unesite decimalni broj:");
             double broj = ulaz.nextDouble();
 
-            int cijeliDio = (int) broj; // Dobijamo cijeli dio broja
-            double decimalniDio = broj - cijeliDio; // Dobijamo decimalni dio broja
+            int cijeliDio = (int) broj; 
+            double decimalniDio = broj - cijeliDio; 
 
-            cijeliDijelovi.add(cijeliDio); // Spremamo cijeli dio
+            cijeliDijelovi.add(cijeliDio); 
 
-            // Provjeravamo uvjet za prekid unosa
             if (cijeliDio >= decimalniDio * 100) {
                 break;
             }
         }
 
-        // Brojanje znamenki
         int[] brojacZnamenki = new int[10]; // Indeks 0 za znamenku '0', indeks 1 za '1', itd.
 
         // Prolaz kroz sve cijele dijelove
