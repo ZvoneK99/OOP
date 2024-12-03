@@ -4,5 +4,5 @@
 /**
  * 
  */
-module FaksVjezbe2 {
+module Vjezbe12 {
 }
