@@ -4,5 +4,5 @@
 /**
  * 
  */
-module primjer09 {
+module Vjezba {
 }
