@@ -7,5 +7,9 @@ public class Planet extends NebeskoTijelo {
 		super(BrzinaOkoOsi, BrzinaOkoSunca);
 		this.Naziv = Naziv;
 	}
+	 @Override
+	    public String toString() {
+	        return "Planet: " + Naziv + ", " + super.toString();
+	    }
 	
 }

@@ -7,5 +7,9 @@ public class Satelit extends NebeskoTijelo {
 		super(BrzinaOkoOsi, BrzinaOkoSunca);
 		this.Naziv = Naziv;
 	}
+	 @Override
+	    public String toString() {
+	        return "Satelit: " + Naziv + ", " + super.toString();
+	    }
 	
 }

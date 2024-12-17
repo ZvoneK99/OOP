@@ -6,7 +6,7 @@ public class Test {
 		Satelit Mjesec = new Satelit("Mjesec", 500, 10000);
 		
 		
-		System.out.println("Zemlja: "+Zemlja);
-		System.out.println("Mjesec: "+Mjesec);
+		System.out.println(Zemlja);
+		System.out.println(Mjesec);
 	}
 }
