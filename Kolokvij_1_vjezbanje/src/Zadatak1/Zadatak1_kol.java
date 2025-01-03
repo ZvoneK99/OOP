@@ -8,8 +8,6 @@ public class Zadatak1_kol {
 		System.out.println("Unesite cijeli broj.");
 		int broj = ulaz.nextInt();
 		
-		
-		
 		int najvecaZnamenka=0;
 		int najmanjaZnamenka=9;
 		
