@@ -12,7 +12,6 @@ public class Cetverokut {
 		
 		if(brojevi.length != 4) {
 			System.out.println("Niste unijeli 4 broja.");
-			return;
 		}
 		int stranicaA = Integer.parseInt(brojevi[0]);
 		int stranicaB = Integer.parseInt(brojevi[1]);
@@ -33,5 +32,6 @@ public class Cetverokut {
 		else {
 			System.out.println("Četverokut nije pravokutan.");
 		}
+		ulaz.close();
 	}
 }
