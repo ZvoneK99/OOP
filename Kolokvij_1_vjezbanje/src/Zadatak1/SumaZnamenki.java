@@ -14,5 +14,6 @@ public class SumaZnamenki {
 			zbrojZnamenki+=znamenka;
 		}
 		System.out.println(zbrojZnamenki);
+		ulaz.close();
 	}
 }

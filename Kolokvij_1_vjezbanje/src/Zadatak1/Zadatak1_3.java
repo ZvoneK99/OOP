@@ -28,5 +28,6 @@ public class Zadatak1_3 {
 		else {
 			System.out.println("Nije palindrom.");
 		}
+		ulaz.close();
 	}
 }

@@ -28,5 +28,6 @@ public class Zadatak1_5 {
 		}
 		System.out.println("Parni: "+brojacParnih+"("+parni+")");
 		System.out.println("Neparni "+brojacNeparnih+"("+neparni+")");
+		ulaz.close();
 	}
 }

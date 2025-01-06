@@ -15,5 +15,6 @@ public class Zadatak1_4 {
 		}
 		naopako = String.valueOf(Integer.parseInt(naopako));
 		System.out.println(naopako);
+		ulaz.close();
 	}
 }

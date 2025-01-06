@@ -28,6 +28,7 @@ public class ParniNeparni {
 		}
 		System.out.println("Parne znamenke "+brojParnih+" Suma parnih "+sumaParnih);
 		System.out.println("Neparne znamenke "+brojNeparnih+" Suma neparnih "+sumaNeparnih);
+		ulaz.close();
 	}
 	
 }

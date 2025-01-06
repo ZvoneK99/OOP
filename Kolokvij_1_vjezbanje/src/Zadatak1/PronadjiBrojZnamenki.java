@@ -16,5 +16,6 @@ public class PronadjiBrojZnamenki {
 			brojacZnamenki++;
 		}
 		System.out.println("Broj ima "+brojacZnamenki+" znamenki.");
+		ulaz.close();
 	}
 }

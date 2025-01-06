@@ -20,6 +20,6 @@ public class Palindrom {
 		else {
 			System.out.println("Nije palindrom");
 		}
-		
+	ulaz.close();	
 	}
 }
