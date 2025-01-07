@@ -42,7 +42,6 @@ public class GeometrijskiLik {
 			}
 		}
 		sb.append(" i opseg: ").append(Opseg());
-		
 		return sb.toString();
 	}
 }
