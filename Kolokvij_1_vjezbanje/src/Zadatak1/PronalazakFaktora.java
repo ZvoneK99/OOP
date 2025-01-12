@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PronalazakFaktora {
-	public static void main(String[]args) {
+	public static void main(UnosStringa[]args) {
 		Scanner ulaz = new Scanner(System.in);
 		System.out.println("Unesite broj");
 		int broj = ulaz.nextInt();

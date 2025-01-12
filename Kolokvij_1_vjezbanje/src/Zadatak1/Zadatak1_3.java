@@ -3,12 +3,12 @@ package Zadatak1;
 import java.util.Scanner;
 
 public class Zadatak1_3 {
-	public static void main(String[]args) {
+	public static void main(UnosStringa[]args) {
 		Scanner ulaz = new Scanner(System.in);
 		System.out.println("Unesite broj.");
 		int broj = ulaz.nextInt();
 		
-		String br = String.valueOf(broj);
+		UnosStringa br = UnosStringa.valueOf(broj);
 		boolean jePalindrom = true;
 		
 		int i=0; 

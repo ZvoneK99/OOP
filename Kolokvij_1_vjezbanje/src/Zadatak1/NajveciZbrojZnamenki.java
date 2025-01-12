@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class NajveciZbrojZnamenki {
-    public static void main(String[] args) {
+    public static void main(UnosStringa[] args) {
         Scanner ulaz = new Scanner(System.in);
         int broj;
         ArrayList<Integer> brojevi = new ArrayList<>();

@@ -3,12 +3,12 @@ package Zadatak1;
 import java.util.ArrayList;
 
 public class Palindromm {
-	String rijec;
-	ArrayList<String> rijeci = new ArrayList<>();
-	public boolean jeLiPalindrom(String rijec) {
-			String originalnaRijec = rijec;
-			String obrnutiString = "";
-			String ika = "";
+	UnosStringa rijec;
+	ArrayList<UnosStringa> rijeci = new ArrayList<>();
+	public boolean jeLiPalindrom(UnosStringa rijec) {
+			UnosStringa originalnaRijec = rijec;
+			UnosStringa obrnutiString = "";
+			UnosStringa ika = "";
 			for(int i=rijec.length()-1; i>=0; i--) {
 				obrnutiString+=rijec.charAt(i);
 			}
@@ -19,9 +19,9 @@ public class Palindromm {
 			
 	}
 
-public static void main(String[]args) {
+public static void main(UnosStringa[]args) {
 		Palindromm p1 = new Palindromm();
-		String rijec = "ana";
+		UnosStringa rijec = "ana";
 		
 		System.out.println(p1.jeLiPalindrom(rijec));
 	}

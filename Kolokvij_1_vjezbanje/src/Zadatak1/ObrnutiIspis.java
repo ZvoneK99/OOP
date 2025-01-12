@@ -3,19 +3,19 @@ package Zadatak1;
 import java.util.Scanner;
 
 public class ObrnutiIspis {
-    public static void main(String[] args) {
+    public static void main(UnosStringa[] args) {
         Scanner ulaz = new Scanner(System.in);
         System.out.println("Unesite rečenicu:");
-        String recenica = ulaz.nextLine();
+        UnosStringa recenica = ulaz.nextLine();
 
-        String[] rijeci = recenica.split(" ");
-        String obrnutaRecenica = "";
-        String obrnuteRijeciURecenici = "";
+        UnosStringa[] rijeci = recenica.split(" ");
+        UnosStringa obrnutaRecenica = "";
+        UnosStringa obrnuteRijeciURecenici = "";
 
         for (int i = rijeci.length - 1; i >= 0; i--) {
             obrnutaRecenica += rijeci[i] + " ";
             
-            String obrnutaRijec = ""; // Resetiraj obrnutu riječ za svaku iteraciju
+            UnosStringa obrnutaRijec = ""; // Resetiraj obrnutu riječ za svaku iteraciju
             for (int j = rijeci[i].length() - 1; j >= 0; j--) {
                 obrnutaRijec += rijeci[i].charAt(j);
             }

@@ -3,16 +3,16 @@ package Zadatak1;
 import java.util.Scanner;
 
 public class Zadatak1_5 {
-	public static void main(String[]args) {
+	public static void main(UnosStringa[]args) {
 		Scanner ulaz = new Scanner(System.in);
 		System.out.println("Unesite broj.");
 		int broj = ulaz.nextInt();
 		
-		String br = String.valueOf(broj);
+		UnosStringa br = UnosStringa.valueOf(broj);
 		
-		String parni = "";
+		UnosStringa parni = "";
 		int brojacParnih = 0;
-		String neparni = "";
+		UnosStringa neparni = "";
 		int brojacNeparnih = 0;
 		
 		for(int i=0; i<br.length(); i++) {

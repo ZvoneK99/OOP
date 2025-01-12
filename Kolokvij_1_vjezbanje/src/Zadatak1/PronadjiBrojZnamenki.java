@@ -3,7 +3,7 @@ package Zadatak1;
 import java.util.Scanner;
 
 public class PronadjiBrojZnamenki {
-	public static void main(String[]args) {
+	public static void main(UnosStringa[]args) {
 		Scanner ulaz = new Scanner(System.in);
 		System.out.println("Unesite broj");
 		int broj = ulaz.nextInt();

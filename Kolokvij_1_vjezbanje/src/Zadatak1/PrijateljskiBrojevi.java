@@ -3,7 +3,7 @@ package Zadatak1;
 import java.util.Scanner;
 
 public class PrijateljskiBrojevi {
-	public static void main(String[]args) {
+	public static void main(UnosStringa[]args) {
 		Scanner ulaz = new Scanner(System.in);
 		System.out.println("Unesite 1.broj");
 		int broj1 = ulaz.nextInt();

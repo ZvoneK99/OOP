@@ -3,12 +3,12 @@ package Zadatak1;
 import java.util.Scanner;
 
 public class Samoglasnici {
-	public static void main(String[]args) {
+	public static void main(UnosStringa[]args) {
 		Scanner ulaz = new Scanner(System.in);
 		System.out.println("Unesite recenicu");
-		String recenicaUnos = ulaz.nextLine();
+		UnosStringa recenicaUnos = ulaz.nextLine();
 		
-		String recenica = recenicaUnos.toLowerCase();
+		UnosStringa recenica = recenicaUnos.toLowerCase();
 		int brojacSamoglasnika = 0;
 		
 		for(int i=0; i<recenica.length(); i++) {
