@@ -18,10 +18,11 @@ public class Zadatak3 {
 
 		LocalDate date1 = LocalDate.parse(unosDatuma1, formatter);
 		LocalDate date2 = LocalDate.parse(unosDatuma2, formatter);
-		
-		 long razlika = ChronoUnit.DAYS.between(date1, date2);
+		LocalDate noviDatum = date1.plusYears(1).plusMonths(2).plusDays(4);
+				 long razlika = ChronoUnit.DAYS.between(date1, date2);
 		 
 		 System.out.println(razlika);
+		 System.out.println(noviDatum);
 		 ulaz.close();
 	}
 }
