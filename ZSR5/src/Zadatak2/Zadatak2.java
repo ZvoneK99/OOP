@@ -12,10 +12,10 @@ public class Zadatak2
     public static void main(String[] args)
     {
         JFrame okvir = new JFrame();
-        okvir.setSize(700, 700);
+        okvir.setSize(350, 350);
         JTextField a= new JTextField();
         JTextField b = new JTextField();
-        JButton potvrdi = new JButton("Potvrdi");
+        JButton potvrdi = new JButton("Provjeri");
         JLabel ispis = new JLabel();
 
         okvir.setLayout(new BoxLayout(okvir.getContentPane(), BoxLayout.Y_AXIS));
@@ -38,16 +38,12 @@ public class Zadatak2
 
                     StringBuilder rezultat = new StringBuilder();
                     rezultat.append("Prosti brojevi između ").append(manjiBroj).append(" i ").append(veciBroj).append(" su: ");
-                for (int i=manjiBroj; i <= veciBroj; i++)
-                {
-                    if (prost(i))
-                    {
-                        rezultat.append(i).append(",");
+                    for (int i = manjiBroj; i <= veciBroj; i++) {
+                        if (prost(i)) {
+                            rezultat.append(i).append(", ");
+                        }
                     }
-                }
-                rezultat.deleteCharAt(rezultat.length() - 1);
-                rezultat.append(".");
-                ispis.setText(rezultat.toString());
+                    ispis.setText(rezultat.toString());
             }
         });
 

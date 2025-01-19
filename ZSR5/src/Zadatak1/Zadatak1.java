@@ -13,12 +13,13 @@ public class Zadatak1
     public static void main(String[] args)
     {
         JFrame okvir = new JFrame();
-        okvir.setSize(600, 600);
+        okvir.setSize(400, 300);
         JTextField tekstualniOkvir = new JTextField();
-        JButton gumb = new JButton("Potvrdi");
+        JButton gumb = new JButton("Izmjeni");
         JTextArea tekstualnoPodrucje = new JTextArea();
 
         okvir.setLayout(new BoxLayout(okvir.getContentPane(), BoxLayout.Y_AXIS));
+        
         okvir.add(tekstualniOkvir);
         okvir.add(gumb);
         okvir.add(tekstualnoPodrucje);

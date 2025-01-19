@@ -15,10 +15,10 @@ public class Zadatak3
     {
         JFrame okvir = new JFrame();
         okvir.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        okvir.setSize(600, 600);
+        okvir.setSize(350, 350);
 
         tekst = new JTextField();
-        tekst.setFont(new Font("Arial", Font.PLAIN, 24));
+        tekst.setFont(new Font("Arial", Font.PLAIN, 20));
         okvir.add(tekst, BorderLayout.NORTH);
 
         JPanel tablica = new JPanel(new GridLayout(4, 4));
@@ -33,7 +33,7 @@ public class Zadatak3
         {
             JButton button = new JButton(buttoni[i]);
             button.addActionListener(new ButtonClickListener());
-            button.setFont(new Font("Arial", Font.PLAIN, 18));
+            button.setFont(new Font("Arial", Font.PLAIN, 20));
             tablica.add(button);
         }
         okvir.add(tablica, BorderLayout.CENTER);
