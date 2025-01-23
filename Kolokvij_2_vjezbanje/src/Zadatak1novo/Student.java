@@ -22,7 +22,6 @@ public class Student extends Osoba {
 			}
 			ocjeneIspita.add(ocjena);
 		}
-		ulaz.close();
 	}
 
 	@Override
@@ -53,7 +52,7 @@ public class Student extends Osoba {
 	@Override
 	public String toString() {
 		
-		return super.toString()+ "Godina studija "+getGodinaStudija();
+		return super.toString()+ "Godina studija "+getGodinaStudija()+" Ocjene:";
 			
 	}
 	

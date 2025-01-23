@@ -14,7 +14,6 @@ public class Nastavnik extends Osoba {
 	public double dohvatiOcjenu() {
 		return ocjenaNastavnika;
 	}
-
 	public String getPredmet() {
 		return predmet;
 	}
