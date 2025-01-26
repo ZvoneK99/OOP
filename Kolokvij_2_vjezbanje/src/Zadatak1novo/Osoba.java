@@ -33,6 +33,6 @@ public abstract class Osoba {
 	
 	@Override 
 	public String toString() {
-		return "ID "+getID()+" Ime i prezime: "+getImePrezime();
+		return "ID "+getID()+" Ime i prezime: "+getImePrezime()+" Ocjena "+dohvatiOcjenu();
  	}
 }
