@@ -51,8 +51,8 @@ public class ZdravstveniCentar {
         pediatrija.ispisiPacijente();
 
         // Računanje i ispis ukupnih troškova plaća za svaki odjel
-        System.out.println("\nUkupni troškovi plaća na odjelu Kardiologija: " + kardiologija.izracunajUkupneTroskovePlaca());
-        System.out.println("Ukupni troškovi plaća na odjelu Pediatrija: " + pediatrija.izracunajUkupneTroskovePlaca());
+        System.out.println("\nUkupni troškovi plaća na odjelu Kardiologija: " + kardiologija);
+        System.out.println("Ukupni troškovi plaća na odjelu Pediatrija: " + pediatrija);
 
         // Ispis detalja termina pregleda
         System.out.println("\n--- Detalji termina pregleda ---");

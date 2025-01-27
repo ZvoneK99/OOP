@@ -60,4 +60,16 @@ public class Odjel {
 	public void setPacijenti(ArrayList<Pacijent> pacijenti) {
 		this.pacijenti = pacijenti;
 	}
+
+	public void ispisiZaposlenike() {
+		for(Zaposlenik z : zaposlenici) {
+			System.out.println(z);
+		}
+	}
+
+	public void ispisiPacijente() {
+		for(Zaposlenik z : zaposlenici) {
+			System.out.println(z);
+		}
+	}
 }
