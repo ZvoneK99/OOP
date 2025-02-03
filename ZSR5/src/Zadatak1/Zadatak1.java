@@ -14,50 +14,46 @@ public class Zadatak1
     {
         JFrame okvir = new JFrame();
         okvir.setSize(400, 300);
-        JTextField tekstualniOkvir = new JTextField();
+        JTextField tekstOkvir = new JTextField();
         JButton gumb = new JButton("Izmjeni");
-        JTextArea tekstualnoPodrucje = new JTextArea();
+        JTextArea tekstPodrucje = new JTextArea();
 
         okvir.setLayout(new BoxLayout(okvir.getContentPane(), BoxLayout.Y_AXIS));
         
-        okvir.add(tekstualniOkvir);
+        okvir.add(tekstOkvir);
         okvir.add(gumb);
-        okvir.add(tekstualnoPodrucje);
+        okvir.add(tekstPodrucje);
 
         gumb.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
             {
-                String unosTeksta = tekstualniOkvir.getText();
-                String novitekst = pretvori_tekst(unosTeksta);
-                tekstualnoPodrucje.append("\n"+ novitekst);
+                String unosTeksta = tekstOkvir.getText();
+                String novitekst = pretvoriTekst(unosTeksta);
+                tekstPodrucje.append("\n"+ novitekst);
             }
         });
 
         okvir.setVisible(true);
         okvir.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
-
-    private static String pretvori_tekst(String tekst)
-    {
-        StringBuilder novitekst = new StringBuilder();
+    private static String pretvoriTekst(String tekst) {
+        String novitekst = ""; 
         char[] znakovi = tekst.toCharArray();
-        for (int i=0; i < znakovi.length; i++)
-        {
+
+        for (int i = 0; i < znakovi.length; i++) {
             char znak = znakovi[i];
-            if (Character.isUpperCase(znak))
-            {
-                novitekst.append(Character.toLowerCase(znak));
-            }
-            else if (Character.isLowerCase(znak))
-            {
-                novitekst.append(Character.toUpperCase(znak));
-            }
-            else
-            {
-                novitekst.append(znak);
+            if (Character.isUpperCase(znak)) {
+                novitekst += Character.toLowerCase(znak);
+            } 
+            else if (Character.isLowerCase(znak)) {
+                novitekst += Character.toUpperCase(znak);
+            } 
+            else {
+                novitekst += znak;
             }
         }
-        return novitekst.toString();
+        return novitekst;
     }
+
 }
